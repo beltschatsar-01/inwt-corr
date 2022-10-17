@@ -1,2 +1,7 @@
-web: uvicorn app.main:app --host=0.0.0.0 
-${PORT}
+web: uvicorn app.main:app --host=0.0.0.0 --port=${PORT:-5000}
+${DATABASE_HOSTNAME}
+${DATABASE_PORT}
+${DATABASE_PASSWORD}
+${DATABASE_NAME}
+${DATABASE_USERNAME}
+
