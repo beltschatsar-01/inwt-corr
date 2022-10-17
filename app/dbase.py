@@ -13,6 +13,7 @@ while  True:
        conn = psycopg2.connect(host=f'{settings.DATABASE_HOSTNAME}',database=f'{settings.DATABASE_NAME}',user=f'{settings.DATABASE_USERNAME}',password=f'{settings.DATABASE_PASSWORD}', cursor_factory=RealDictCursor)
    
        cursor = conn.cursor()  
+       {settings.DATABASE_URL}
        print("Database was connected succesfully !")
        break
         
