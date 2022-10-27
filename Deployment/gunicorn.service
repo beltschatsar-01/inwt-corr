@@ -1,0 +1,15 @@
+[Unit]
+Description=demo inwtrust
+After=network.target
+
+[Service]
+User=jerson
+Group=jerson
+WorkingDirectory=/home/jerson/app/inwtrust/
+Environment="PATH=/home/jerson/app/venv/bin"
+EnvironmentFile=/home/jerson/.env
+ExecStart=/home/jerson/app/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
+
+[Install]
+WantedBy=multi-user.target
+
