@@ -19,3 +19,8 @@ app.include_router(mypost.router)
 app.include_router(myusers.router)
 app.include_router(auth_login.router)
 app.include_router(mylikes.router)
+
+
+@app.get('/')
+def newget():
+    return {"message":"oye to toye !!!"}
